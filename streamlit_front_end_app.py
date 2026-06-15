@@ -14,7 +14,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
 
 
-load_dotenv()
+# load_dotenv()
 # ════════════════════════════════════════════════════════════════
 # PAGE CONFIG — must be first Streamlit command
 # ════════════════════════════════════════════════════════════════
@@ -32,8 +32,8 @@ st.set_page_config(
 
 # Streamlit Cloud reads from .streamlit/secrets.toml
 # Locally, also works with .env via os.getenv as fallback
-# GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not GOOGLE_API_KEY:
     st.error("GOOGLE_API_KEY not found. Add it to .streamlit/secrets.toml")

@@ -4,7 +4,7 @@ import streamlit as st
 from pathlib import Path
 from typing import TypedDict
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
